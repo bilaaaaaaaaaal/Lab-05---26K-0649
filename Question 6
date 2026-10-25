@@ -1,0 +1,58 @@
+#include <stdio.h>
+int main() {
+    int category, sub_type, delayed;    
+    printf("Choose a category (1 = Greeting, 2 = Query, 3 = Complaint, 4 = Feedback): ");
+    scanf("%d", &category);
+    
+    if (category == 1) {
+        printf("Choose sub-type (1 = Morning, 2 = Evening): ");
+        scanf("%d", &sub_type);
+        if (sub_type == 1) {
+            printf("Bot reply: Good morning! How can I help you today?[cite: 6]\n");
+        } else if (sub_type == 2) {
+            printf("Bot reply: Good evening! How can I help you today?[cite: 6]\n");
+        } else {
+            printf("Invalid selection[cite: 6]\n");
+        }
+    } else if (category == 2) {
+        printf("Choose sub-type (1 = Product, 2 = Billing, 3 = Technical): ");
+        scanf("%d", &sub_type);
+        if (sub_type == 1) {
+            printf("Bot reply: Connecting you to Product support.[cite: 6]\n");
+        } else if (sub_type == 2) {
+            printf("Bot reply: Connecting you to Billing support.[cite: 6]\n");
+        } else if (sub_type == 3) {
+            printf("Bot reply: Connecting you to Technical support.[cite: 6]\n");
+        } else {
+            printf("Invalid selection[cite: 6]\n");
+        }
+    } else if (category == 3) {
+        printf("Choose sub-type (1 = Delivery, 2 = Quality): ");
+        scanf("%d", &sub_type);
+        if (sub_type == 1) {
+            printf("Is the order delayed? (1 = Yes, 0 = No): ");
+            scanf("%d", &delayed);
+            if (delayed == 1) {
+                printf("Bot reply: We sincerely apologize for the delay in your delivery.[cite: 6]\n");
+            } else {
+                printf("Bot reply: We apologize for any inconvenience with your delivery.[cite: 6]\n");
+            }
+        } else if (sub_type == 2) {
+            printf("Bot reply: We apologize for the quality issue. We will look into it.[cite: 6]\n");
+        } else {
+            printf("Invalid selection[cite: 6]\n");
+        }
+    } else if (category == 4) {
+        printf("Choose sub-type (1 = Positive, 2 = Negative): ");
+        scanf("%d", &sub_type);
+        if (sub_type == 1) {
+            printf("Bot reply: Thank you so much for your positive feedback![cite: 6]\n");
+        } else if (sub_type == 2) {
+            printf("Bot reply: We are sorry to hear your feedback and will improve.[cite: 6]\n");
+        } else {
+            printf("Invalid selection[cite: 6]\n");
+        }
+    } else {
+        printf("Invalid selection[cite: 6]\n");
+    }
+}
